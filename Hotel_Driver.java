@@ -10,6 +10,8 @@ public class Hotel_Driver {
 
 public static void main(String[] args){
     
+    //instancia de todas las clases
+
     Scanner scanner = new Scanner(System.in);
     
     Cliente c1 = new Cliente();
@@ -19,7 +21,7 @@ public static void main(String[] args){
     Cliente c5 = new Cliente();
     Cliente c6 = new Cliente();
 
-    Cliente[] clientes = {c1,c2,c3,c4,c5,c6};
+   
 
     Room E1 = new Room();
     Room E2 = new Room();
@@ -35,8 +37,6 @@ public static void main(String[] args){
     E2.setEspacio(4);
     E2.setPrecio(1000);
     E2.setRqeuisito(0);
-
-
 
     Room D1 = new Room();
     Room D2 = new Room();
@@ -72,10 +72,15 @@ public static void main(String[] args){
 
     frontdesk.setIncome(0);
 
+    //arrays y variables absolutas 
+    
+    Cliente[] clientes = {c1,c2,c3,c4,c5,c6};
     Room[] rooms = {E1,E2,D1,D2,S1,S2};
 
     boolean program = true;
+    int r=0;
 
+    //ciclo del programa
     while (program == true) {
         System.out.println("\n");
         System.out.println("===Tranquility Base Hotel & Casino===");
@@ -94,7 +99,6 @@ public static void main(String[] args){
         if (e == 1){
         String catcher = scanner.nextLine();
         System.out.println(catcher);
-        int r=0;
         System.out.println("Ingrese su nombre");
         String g = scanner.nextLine();
         clientes[r].setName(g);
@@ -108,13 +112,15 @@ public static void main(String[] args){
         System.out.println("Ingrese cuantas personas ");
         int nump = scanner.nextInt();
         clientes[r].setEspacios(nump);
-
         r++;
+        
         } else if (e == 2){
             for (int i = 0; i < clientes.length; i++) {
                     System.out.println(clientes[i].getName() + " que ha visitado el hotel " + clientes[i].getFrequency() + " veces.");
                 }
 
+
+                //esto es lo que iba a ser el metodo asignar que para no complicarme tanto lo saque al main
         } else if (e == 3){
             for (int t = 0; t < clientes.length; t++){
             for (int i = 0; i < rooms.length; i++){
@@ -127,8 +133,9 @@ public static void main(String[] args){
             }
             }
             }
+
         } else if (e == 4){
-            for (int i = 0; i < 5; i++) {
+            for (int i = 0; i < rooms.length; i++) {
                 frontdesk.showReservs(rooms[i]);   
                 }
         }else if (e == 5){

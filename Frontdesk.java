@@ -24,6 +24,8 @@ public void incometostring(){
     System.out.println("EL total vendido es de Q." + this.income);
 }
 
+//el metodo asignar paso a ser un ciclo en el Driver
+
 public void showReservs(Room cuarto){
     System.out.println("Cuarto de tipo " + cuarto.getTipo() + " fue reservado por " + cuarto.getGuest()); 
 }

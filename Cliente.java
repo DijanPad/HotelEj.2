@@ -66,8 +66,4 @@ public void setClientType(String clientType) {
     this.clientType = clientType;
 }
 
-//metodos
-
-
-
 }
