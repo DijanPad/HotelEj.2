@@ -17,6 +17,10 @@ private int precio;
 
 private int rqeuisito;
 
+// atributo no previsto
+private String guest;
+
+
 public String getTipo() {
     return tipo;
 }
@@ -25,7 +29,7 @@ public void setTipo(String tipo) {
     this.tipo = tipo;
 }
 
-public boolean isDisponibilidad() {
+public boolean getDisponibilidad() {
     return disponibilidad;
 }
 
@@ -55,6 +59,14 @@ public int getRqeuisito() {
 
 public void setRqeuisito(int rqeuisito) {
     this.rqeuisito = rqeuisito;
+}
+
+public String getGuest() {
+    return guest;
+}
+
+public void setGuest(String guest) {
+    this.guest = guest;
 }
 
 

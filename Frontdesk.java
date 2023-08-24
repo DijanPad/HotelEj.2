@@ -9,11 +9,6 @@ public class Frontdesk {
     
 private int income;
 
-private int habitIndex;
-
-private int clientIndex;
-
-
 
 //Metodos
 public int getIncome() {
@@ -24,28 +19,13 @@ public void setIncome(int income) {
     this.income = income;
 }
 
-public int getHabitIndex() {
-    return habitIndex;
+//metodo no previsto
+public void incometostring(){
+    System.out.println("EL total vendido es de Q." + this.income);
 }
 
-public void setHabitIndex(int habitIndex) {
-    this.habitIndex = habitIndex;
-}
-
-public int getClientIndex() {
-    return clientIndex;
-}
-
-public void setClientIndex(int clientIndex) {
-    this.clientIndex = clientIndex;
-}
-
-public void asignar(freq, espacios, hasRoom, tipo, dispo, precio, espacio, clientesArray, roomsArray){
-
-}
-
-public void showReservs(){
-
+public void showReservs(Room cuarto){
+    System.out.println("Cuarto de tipo " + cuarto.getTipo() + " fue reservado por " + cuarto.getGuest()); 
 }
 
 }

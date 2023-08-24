@@ -24,6 +24,14 @@ public int getFrequency() {
 
 public void setFrequency(int frequency) {
     this.frequency = frequency;
+    if(frequency < 5){
+        this.clientType = "Regular";
+    }else if(frequency >= 5){
+        this.clientType = "Frecuente";
+    }else if(frequency >= 10){
+        this.clientType = "VIP";
+    }
+
 }
 
 public int getEspacios() {
@@ -34,7 +42,7 @@ public void setEspacios(int espacios) {
     this.espacios = espacios;
 }
 
-public boolean isHasRoom() {
+public boolean getHasRoom() {
     return hasRoom;
 }
 
